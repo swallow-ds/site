@@ -1,0 +1,316 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+font-family: 'Barlow Condensed', sans-serif;
+}
+
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: black;
+color: #fff;
+}
+
+/* ヘッダー全体のスタイル */
+header {
+    width: 100%;
+    /* background-color: #333; */
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ナビゲーションメニューのスタイル */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* ヘッダーの高さ */
+}
+
+#header-logo {
+    height: 70px; /* ロゴの高さ、必要に応じて調整してください */
+    width: auto; /* ロゴの幅を自動調整 */
+    float: inline-start;
+padding: 10px;
+}
+
+/* ハンバーガーメニューのスタイル */
+#hamburger-menu {
+    display: block; /* 画面サイズに応じて 'none' にすることも可能です */
+    cursor: pointer;
+    width: 30px; /* メニューの幅を調整 */
+    height: 25px; /* メニューの高さを調整 */
+    position: fixed; /* メニューの位置を調整 */
+    top: 10px; /* 上からの距離を調整 */
+    right: 10px; /* 右からの距離を調整 */
+    z-index: 1000; /* 他の要素の上に表示する */
+}
+
+#hamburger-menu span {
+    display: block;
+    background: black; /* メニューバーの色 */
+    height: 2px; /* メニューバーの厚さ */
+    margin-bottom: 8px; /* メニューバー間の距離 */
+    transition: all 0.3s ease-in-out;
+}
+
+#hamburger-menu span:last-child {
+    margin-bottom: 0; /* 最後のバーの下の余白を削除 */
+}
+
+.hidden {
+    display: none;
+}
+
+/* ナビゲーションメニューのリンクスタイル */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+/* ナビゲーションメニューのスタイル */
+#nav-menu {
+    /* スタイル定義 */
+}
+
+
+/* レスポンシブデザイン用のスタイル */
+@media (max-width: 768px) {
+    #hamburger-menu {
+        display: block; /* スマートフォン用に表示 */
+    }
+
+    #nav-menu {
+        display: none; /* 初期状態では非表示 */
+        position: absolute;
+        top: 60px; /* ヘッダーの高さに応じて */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    #nav-menu a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* メディアクエリ内でのメニュー表示スタイル (レスポンシブ対応) */
+@media screen and (max-width: 768px) {
+    #nav-menu {
+        /* モバイルビューでのスタイル */
+        position: absolute;
+        background: #fff; /* 背景色はお好みで */
+        width: 100%; /* または必要に応じて */
+        /* その他のスタイル */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Styles for mobile (responsive design) */
+    #services {
+        /* Styles for vertical alignment of services */
+    }
+}
+
+#parallax-container {
+  position: relative;
+  height: 50vh; /* ビューポートの高さに合わせて調整 */
+  overflow: hidden;
+}
+
+.parallax {
+  /* 前述のパララックス効果を実現するためのスタイル */
+}
+.scene {
+	position: absolute;
+	width: 100%;
+	transform: translateY(var(--translateY));
+	will-change: transform;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+    color: #000;
+background-color: none;
+  z-index: 10; /* パララックス画像の上に表示 */
+    text-align: left;
+}
+
+@media (max-width: 1470px) {
+.content {
+top: 47%;
+}
+}
+
+@media (max-width: 1300px) {
+.content {
+top: 35%;
+font-size: 14px;
+}
+}
+
+@media (max-width: 1040px) {
+.content {
+top: 30%;
+font-size: 13px;
+}
+}
+
+.content{
+    font-size: 4em;
+    font-weight: 500;
+white-space: nowrap;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .content{
+    font-size: 2em; /* スマートフォンではフォントサイズを小さく */
+    top: 30%;
+}
+}
+
+@media (max-width: 768px) {
+  #parallax-container{
+    height: 30vh;
+}
+}
+
+#sub_title{
+max-width: 960px;
+text-align: center;
+font-weight: 400;
+font-size: 4em;
+margin: 0 auto;
+margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+#sub_title{
+font-size: 2em;
+}
+}
+
+#services {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+text-align: center;
+margin: 0 auto;
+}
+
+.service {
+    width: 30%; /* Adjust the width as per your design */
+    text-align: center;
+margin: 10px;
+background: #1d1d1d;
+text-align: left;
+padding: 30px;
+text-align: center;
+}
+
+.service img{
+width: 190px;
+display: block;
+margin: 0 auto;
+}
+
+.service h2{
+font-weight: 400;
+margin: 5px;
+font-size: 1.5em;
+}
+
+.service p{
+font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+#contact{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+margin-bottom: 10em;
+}
+
+#contact p{
+    margin: 20px auto 20px;
+}
+
+#contact button{
+    padding: 10px 200px;
+}
+
+footer{
+text-align: center;
+}
+
+footer img{
+width: 180px;
+display: block;
+margin: 0 auto 20px;
+}
+
+footer p{
+margin-bottom: 100px;
+font-size: 0.8em;
+}
+
+
+.contact-button a{
+text-decoration: none;
+}
+
+.contact-button a:hover{
+opacity: 0.7;
+}
+
+#sticky-header button{
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    float: right;
+    color: #fff;
+    background: #000;
+    padding: 10px 40px;
+}
+
+
+
+
+
+@media (min-width: 1111px) {
+    #sub_title{
+    margin-top: 1em;
+}
+}
