@@ -145,10 +145,11 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-    color: #000;
+    color: #909eb0;
 background-color: none;
   z-index: 10; /* パララックス画像の上に表示 */
     text-align: left;
+	
 }
 
 @media (max-width: 1470px) {
